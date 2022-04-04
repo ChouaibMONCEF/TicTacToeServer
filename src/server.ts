@@ -49,9 +49,8 @@ function onError(error) {
 }
 
 function onListening() {
-  var address: any = server.address();
-  var bind =
-    typeof address === "string" ? "Pipe " + address : "Port " + address.port;
+  var address = server.address();
+  var bind = typeof address === "string" ? "Pipe " + address : "Port " + address.port;
   debug("Listening on " + bind);
   console.log("Server Runing on Port: ", port);
 }
